@@ -25,7 +25,19 @@ warmStrategyCache({
 });
 
 registerRoute(
-  ({ request }) => ['style', 'script', 'image'] .includes(request.destination)), assertCache
+  ({ request }) => ['style', 'script', 'image'] .includes(request.destination))
+  new StaleWhileRevalidate({
+    // Name of the cache storage.
+    cacheName: 'asset-cache',
+    plugins: [
+      // This plugin will cache responses with these headers to a maximum-age of 30 days
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
 
 // TODO: Implement asset caching
-registerRoute();
+registerRoute(
+
+);
