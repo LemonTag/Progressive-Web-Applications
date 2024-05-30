@@ -3,7 +3,7 @@
   "type":"module",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack --mode production",
+    "build": "webpack",
     "start": "node server.mjs"
   },
   "author": "Keegan Micu",
