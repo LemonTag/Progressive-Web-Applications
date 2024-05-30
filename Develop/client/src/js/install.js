@@ -26,6 +26,14 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 
 
+  // Wait for the user to respond to the prompt
+  const result = await promptEvent.userChoice;
+        
+  console.log('User choice:', result);
+  
+  // Reset the deferred prompt variable
+  window.deferredPrompt = null;
+
 
 // TODO: Implement a click event handler on the `butInstall` element
 
