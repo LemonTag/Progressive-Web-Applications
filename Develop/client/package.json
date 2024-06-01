@@ -1,10 +1,10 @@
 {
   "name": "JATE",
-  "type":"module",
+  
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
-    "start": "node server.mjs"
+    "start": "node server.js"
   },
   "author": "Keegan Micu",
   "license": "MIT",
